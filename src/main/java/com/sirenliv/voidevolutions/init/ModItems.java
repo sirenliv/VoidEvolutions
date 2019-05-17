@@ -18,11 +18,13 @@ public class ModItems {
 	static Item itemEmptyGenomeTube;
 	static Item itemFilledGenomeTube;
 	static Item itemBasicGeneticSlurry;
+	static Item itemPerfectedGeneticSlurry;
 	
 	public static void init() {
 		itemEmptyGenomeTube = new ItemBasic("itemEmptyGenomeTube").setCreativeTab(CreativeTabs.MISC).setMaxStackSize(1);
 		itemFilledGenomeTube = new ItemBasic("itemFilledGenomeTube").setCreativeTab(CreativeTabs.MISC).setMaxStackSize(1);
 		itemBasicGeneticSlurry = new ItemBasic("itemBasicGeneticSlurry").setCreativeTab(CreativeTabs.MISC).setMaxStackSize(1);
+		itemPerfectedGeneticSlurry = new ItemBasic("itemPerfectedGeneticSlurry").setCreativeTab(CreativeTabs.MISC).setMaxStackSize(1);
 	}
 	
 	@SubscribeEvent
@@ -30,6 +32,7 @@ public class ModItems {
 		event.getRegistry().registerAll(itemEmptyGenomeTube);
 		event.getRegistry().registerAll(itemFilledGenomeTube);
 		event.getRegistry().registerAll(itemBasicGeneticSlurry);
+		event.getRegistry().registerAll(itemPerfectedGeneticSlurry);
 }
 	
 	@SubscribeEvent
@@ -37,6 +40,7 @@ public class ModItems {
 		registerRender(itemEmptyGenomeTube);
 		registerRender(itemFilledGenomeTube);
 		registerRender(itemBasicGeneticSlurry);
+		registerRender(itemPerfectedGeneticSlurry);
 	}
 	
 	private static void registerRender(Item item) {
