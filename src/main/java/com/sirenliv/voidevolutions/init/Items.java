@@ -8,6 +8,7 @@ import com.sirenliv.voidevolutions.items.ItemRudimentaryVoidGenomeTube;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
@@ -15,7 +16,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @Mod.EventBusSubscriber(modid=Reference.MODID)
-public class ModItems {
+public class Items {
 	
 	static Item itemEmptyGenomeTube;
 	static Item itemPerfectedVoidGenomeTube;
@@ -24,11 +25,11 @@ public class ModItems {
 	static Item itemPerfectedGeneticSlurry;
 	
 	public static void init() {
-		itemEmptyGenomeTube = new ItemBasic("itemEmptyGenomeTube").setCreativeTab(CreativeTabs.MISC).setMaxStackSize(1);
-		itemPerfectedVoidGenomeTube = new ItemPerfectedVoidGenomeTube("itemPerfectedVoidGenomeTube").setCreativeTab(CreativeTabs.MISC).setMaxStackSize(1);
-		itemRudimentaryGenomeTube = new ItemRudimentaryVoidGenomeTube("itemRudimentaryVoidGenomeTube").setCreativeTab(CreativeTabs.MISC).setMaxStackSize(1);
-		itemRudimentaryGeneticSlurry = new ItemBasic("itemRudimentaryGeneticSlurry").setCreativeTab(CreativeTabs.MISC).setMaxStackSize(1);
-		itemPerfectedGeneticSlurry = new ItemBasic("itemPerfectedGeneticSlurry").setCreativeTab(CreativeTabs.MISC).setMaxStackSize(1);
+		itemEmptyGenomeTube = new ItemBasic("itemEmptyGenomeTube").setCreativeTab(tabVoidEvolutions).setMaxStackSize(1);
+		itemPerfectedVoidGenomeTube = new ItemPerfectedVoidGenomeTube("itemPerfectedVoidGenomeTube").setCreativeTab(tabVoidEvolutions).setMaxStackSize(1);
+		itemRudimentaryGenomeTube = new ItemRudimentaryVoidGenomeTube("itemRudimentaryVoidGenomeTube").setCreativeTab(tabVoidEvolutions).setMaxStackSize(1);
+		itemRudimentaryGeneticSlurry = new ItemBasic("itemRudimentaryGeneticSlurry").setCreativeTab(tabVoidEvolutions).setMaxStackSize(1);
+		itemPerfectedGeneticSlurry = new ItemBasic("itemPerfectedGeneticSlurry").setCreativeTab(tabVoidEvolutions).setMaxStackSize(1);
 	}
 	
 	@SubscribeEvent
@@ -52,4 +53,16 @@ public class ModItems {
 	private static void registerRender(Item item) {
 		ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation( item.getRegistryName(), "inventory"));
 	}
+
+	static final CreativeTabs tabVoidEvolutions = (new CreativeTabs("tabVoidEvolutions") {
+		@Override
+		public ItemStack getTabIconItem() {
+			return new ItemStack(itemPerfectedVoidGenomeTube);
+		}
+
+		@Override
+		public boolean hasSearchBar() {
+			return true;
+		}
+	});
 }

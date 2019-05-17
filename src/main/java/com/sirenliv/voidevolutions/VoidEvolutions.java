@@ -1,6 +1,6 @@
 package com.sirenliv.voidevolutions;
 
-import com.sirenliv.voidevolutions.init.ModItems;
+import com.sirenliv.voidevolutions.init.Items;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -16,7 +16,7 @@ public class VoidEvolutions {
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event){
-		ModItems.init();
+		Items.init();
 	}
 	
 	@EventHandler
