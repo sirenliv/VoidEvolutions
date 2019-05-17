@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:ghast_tear"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:wither_skeleton_skull"
+    },
+    {
+      "item": "minecraft:gunpowder"
+    },
+    {
+      "item": "minecraft:nether_star"
+    },
+    {
+      "item": "minecraft:slime_ball"
+    },
+    {
+      "item": "minecraft:wet_sponge"
+    },
+    {
+      "item": "minecraft:bone"
+    },
+    {
+      "item": "minecraft:shulker_shell"
+    }
+  ],
+  "result": {
+      "item": "voidevolutions:itemperfectedgeneticslurry"
+  }
+}
