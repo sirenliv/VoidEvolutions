@@ -1,7 +1,7 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "voidevolutions:items/itembasicgeneticslurry"
+        "layer0": "voidevolutions:items/itemrudimentarygeneticslurry"
      },
      
     "display": {
