@@ -3,6 +3,7 @@ package com.sirenliv.voidevolutions.init;
 import com.sirenliv.voidevolutions.items.ItemBasic;
 import com.sirenliv.voidevolutions.Reference;
 
+import com.sirenliv.voidevolutions.items.ItemPerfectedVoidGenomeTube;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -16,13 +17,13 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 public class ModItems {
 	
 	static Item itemEmptyGenomeTube;
-	static Item itemFilledGenomeTube;
+	static Item itemPerfectedVoidGenomeTube;
 	static Item itemBasicGeneticSlurry;
 	static Item itemPerfectedGeneticSlurry;
 	
 	public static void init() {
 		itemEmptyGenomeTube = new ItemBasic("itemEmptyGenomeTube").setCreativeTab(CreativeTabs.MISC).setMaxStackSize(1);
-		itemFilledGenomeTube = new ItemBasic("itemFilledGenomeTube").setCreativeTab(CreativeTabs.MISC).setMaxStackSize(1);
+		itemPerfectedVoidGenomeTube = new ItemPerfectedVoidGenomeTube("itemPerfectedVoidGenomeTube").setCreativeTab(CreativeTabs.MISC).setMaxStackSize(1);
 		itemBasicGeneticSlurry = new ItemBasic("itemBasicGeneticSlurry").setCreativeTab(CreativeTabs.MISC).setMaxStackSize(1);
 		itemPerfectedGeneticSlurry = new ItemBasic("itemPerfectedGeneticSlurry").setCreativeTab(CreativeTabs.MISC).setMaxStackSize(1);
 	}
@@ -31,7 +32,7 @@ public class ModItems {
 	public static void registerItems(RegistryEvent.Register<Item> event) {
 		event.getRegistry().registerAll(itemEmptyGenomeTube);
 		event.getRegistry().registerAll(itemFilledGenomeTube);
-		event.getRegistry().registerAll(itemBasicGeneticSlurry);
+		event.getRegistry().registerAll(itemPerfectedVoidGenomeTube);
 		event.getRegistry().registerAll(itemPerfectedGeneticSlurry);
 }
 	
@@ -39,7 +40,7 @@ public class ModItems {
 	public static void registerRenders(ModelRegistryEvent event) {
 		registerRender(itemEmptyGenomeTube);
 		registerRender(itemFilledGenomeTube);
-		registerRender(itemBasicGeneticSlurry);
+		registerRender(itemPerfectedVoidGenomeTube);
 		registerRender(itemPerfectedGeneticSlurry);
 	}
 	
