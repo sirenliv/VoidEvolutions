@@ -1,0 +1,29 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "#MS",
+    "RBR",
+    "SM#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:bone"
+    },
+    "M": {
+      "item": "minecraft:magma_cream"
+    },
+    "S": {
+      "item": "minecraft:spider_eye"
+    },
+    "R": {
+      "item": "minecraft:rotten_flesh"
+    },
+    "B": {
+      "item": "minecraft:blaze_powder"
+    }
+  },
+  "result":
+  {
+    "item": "voidevolutions:itemrudimentarygeneticslurry",
+  }
+}
